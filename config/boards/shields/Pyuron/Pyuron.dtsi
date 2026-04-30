@@ -15,6 +15,54 @@
     };
 
 //trackball settings  
+
+/ {
+    chosen {
+        zmk,physical-layout = &default_layout;
+    };
+
+    trackball_L: trackball_L {
+        compatible = "pixart,paw3222";
+        reg = <0>;
+        status = "okay";
+    };
+
+    trackball_R: trackball_R {
+        compatible = "pixart,paw3222";
+        reg = <1>;
+        status = "okay";
+    };
+
+//trackball settings
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        trackball_split_L: trackball_split_L@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+            device = <&trackball_L>;
+        };
+    };
+
+    trackball_listener_L: trackball_listener_L {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_split_L>;
+
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 1 16>,
+            <&zip_scroll_scaler 1 5>,
+            <&zip_xy_to_scroll_mapper>;
+    };
+
+    trackball_listener_R: trackball_listener_R {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_R>;
+    };
+
 split_inputs {
       #address-cells = <1>;
       #size-cells = <0>;
