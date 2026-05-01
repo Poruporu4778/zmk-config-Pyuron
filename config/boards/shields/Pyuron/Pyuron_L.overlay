@@ -30,9 +30,20 @@
     };
 };
 
-&trackball_split_L {
-    device = <&trackball_L>;
+/* Pyuron_L.overlay */
+
+/ {
+    // & を付けず、/ { } の中で新規ノードとして定義します
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_L>;
+        input-processors = 
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 1 16>;
+    };
 };
+
+// 既存の &spi0 や &pinctrl はこの下にそのまま残す
 
 &spi0 {
     status = "okay";
