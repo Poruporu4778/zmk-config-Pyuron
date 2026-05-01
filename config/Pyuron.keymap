@@ -22,6 +22,19 @@
 #define JP_YEN          INT3               // ￥
 #define JP_UNDERSCORE   LS(INT1)           // _
 
+/ {
+    behaviors {
+        slow_move: slow_move {
+            compatible = "zmk,behavior-input-two-axis";
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <4000>;
+            delay-ms = <16>;
+            acceleration-exponent = <0>;
+        };
+    };
+};
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
