@@ -32,14 +32,18 @@
     };
 };
 
-&trackball_listener_L {
-    status = "okay";
+/* Pyuron_R.overlay */
+
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_R>;
+        input-processors = 
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>;
+    };
 };
 
-&trackball_listener_R {
-    status = "okay";
-    device = <&trackball_R>;
-};
+// 既存の &spi0 や &pinctrl はこの下にそのまま残す
 
 &spi0 {
     status = "okay";
