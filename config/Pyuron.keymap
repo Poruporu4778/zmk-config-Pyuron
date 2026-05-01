@@ -22,34 +22,6 @@
 #define JP_YEN          INT3               // ￥
 #define JP_UNDERSCORE   LS(INT1)           // _
 
-/ {
-    behaviors {
-        slow_move: slow_move {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <2>;
-            x-input-code = <INPUT_REL_X>;
-            y-input-code = <INPUT_REL_Y>;
-            time-to-max-speed-ms = <3000>;
-            delay-ms = <16>;
-            acceleration-exponent = <0>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        slow_scroll: slow_scroll {
-            compatible = "zmk,behavior-input-two-axis";
-            #binding-cells = <2>;
-            x-input-code = <INPUT_REL_HWHEEL>;
-            y-input-code = <INPUT_REL_WHEEL>;
-            time-to-max-speed-ms = <3000>;
-            delay-ms = <16>;
-            acceleration-exponent = <0>;
-        };
-    };
-};
-
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
