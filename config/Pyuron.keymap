@@ -70,10 +70,10 @@
 
         layer_1 {
             bindings = <
-&kp N7                   &kp N8                     &kp N9  &kp MINUS  &kp JP_PLUS      &kp JP_CARET     &kp JP_AMPERSAND  &kp JP_TILDE   &kp JP_LBRACKET  &kp JP_RBRACKET
-&kp N4                   &kp N5                     &kp N6  &kp SLASH  &kp JP_ASTERISK  &kp EXCLAMATION  &kp JP_AT         &kp HASH       &kp DOLLAR       &kp PERCENT
-&kp N1                   &kp N2                     &kp N3  &kp PERIOD &kp JP_EQUAL     &trans           &kp JP_COLON      &kp SEMICOLON  &kp JP_LPAREN    &kp JP_RPAREN
-&kp LS(INTERNATIONAL_1)  &mt RIGHT_SHIFT LS(SLASH)  &kp N0  &kp INT3   &trans           &kp JP_YEN       &kp LS(N2)        &kp LS(N7)     &kp LS(COMMA)    &kp LS(PERIOD)
+&kp N7                   &kp N8                     &kp N9  &kp MINUS   &kp JP_PLUS      &kp JP_CARET     &kp JP_AMPERSAND  &kp JP_TILDE   &kp JP_LBRACKET  &kp JP_RBRACKET
+&kp N4                   &kp N5                     &kp N6  &kp SLASH   &kp JP_ASTERISK  &kp EXCLAMATION  &kp JP_AT         &kp HASH       &kp DOLLAR       &kp PERCENT
+&kp N1                   &kp N2                     &kp N3  &kp PERIOD  &kp JP_EQUAL     &mo 2            &kp JP_COLON      &kp SEMICOLON  &kp JP_LPAREN    &kp JP_RPAREN
+&kp LS(INTERNATIONAL_1)  &mt RIGHT_SHIFT LS(SLASH)  &kp N0  &kp INT3    &trans           &kp LS(N2)       &kp LS(N7)        &trans         &kp LS(COMMA)    &kp LS(PERIOD)
             >;
         };
 
@@ -88,10 +88,10 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE           &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans   &trans  &trans  &trans     &msc SCRL_UP  &trans              
-&kp HOME             &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans  &trans  &mkp LCLK  &mkp MCLK     &mkp RCLK   
-&kp LEFT_SHIFT       &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans  &trans  &trans     &trans        &kp LA(LEFT_ARROW)  &msc SCRL_DOWN
-&kp LA(RIGHT_ARROW)  &trans                  &trans          &trans                   &trans   &trans  &trans  &trans     &trans  
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans   &trans  &trans  &trans     &msc SCRL_UP  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans  &trans  &mkp LCLK  &mkp MCLK     &mkp RCLK
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans  &trans  &trans     &trans        &kp LA(LEFT_ARROW)
+&msc SCRL_DOWN  &kp LA(RIGHT_ARROW)     &trans          &trans                   &trans   &trans  &trans  &trans     &trans        &trans
             >;
         };
 
