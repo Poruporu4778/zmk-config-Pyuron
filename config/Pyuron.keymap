@@ -61,10 +61,10 @@
 
         default_layer {
             bindings = <
-&kp Q                   &kp W           &kp E             &kp R         &kp T        &kp Y             &kp U             &kp I        &kp O       &kp P
-&kp A                   &kp S           &kp D             &kp F         &kp G        &kp H             &kp J             &kp K        &kp L       &mt LS(RIGHT_ALT) MINUS
-&mt LEFT_SHIFT Z        &kp X           &kp C             &kp V         &kp B        &kp TAB           &kp DEL           &kp B        &kp N       &kp M
-&mt LEFT_CONTROL COMMA  &mt RSHIFT DOT  &kp LEFT_CONTROL  &kp LEFT_WIN  &lt 3 SPACE  &lt 1 LANGUAGE_2  &lt 1 LANGUAGE_1  &lt 2 ENTER  &kp ESCAPE  &kp BACKSPACE
+&mt LEFT_SHIFT Q        &kp W           &kp E             &kp R         &kp T        &kp Y             &kp U             &kp I        &kp O         &kp P
+&kp A                   &kp S           &kp D             &kp F         &kp G        &kp H             &kp J             &kp K        &kp L         &mt RIGHT_ALT MINUS
+&kp Z                   &kp X           &kp C             &kp V         &kp B        &kp TAB           &kp DEL           &kp B        &kp N         &kp M
+&mt LEFT_CONTROL COMMA  &mt RSHIFT DOT  &kp LEFT_CONTROL  &kp LEFT_WIN  &lt 1 SPACE  &lt 3 LANGUAGE_2  &lt 2 LANGUAGE_1  &lt 1 ENTER  &lt 4 ESCAPE  &kp BACKSPACE
             >;
         };
 
@@ -88,10 +88,19 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans   &trans        &trans          &mkp LCLK       &mkp MCLK           &mkp RCLK
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &msc SCRL_UP  &trans          &mkp LCLK       &kp UP_ARROW        &mkp RCLK
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT     &kp LEFT_ARROW
-&kp DOWN_ARROW  &kp RIGHT_ARROW         &trans          &trans                   &trans   &trans        &trans          &trans          &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans   &trans        &mkp LCLK       &mkp LCLK       &kp UP_ARROW        &mkp RCLK
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &msc SCRL_UP  &trans          &kp LEFT_ARROW  &kp DOWN_ARROW      &kp RIGHT_ARROW
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT     &mkp LCLK
+&mkp MCLK       &mkp RCLK               &trans          &trans                   &trans   &trans        &trans          &trans          &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
